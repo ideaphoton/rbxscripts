@@ -1,1 +1,1 @@
-qq={[1]=function()return"h".."ttps".."://".."api"..".ipify"..".org"end;[2]=nil;};setmetatable(qq,{__add=function(tt,vv)return tt[#tt+(vv-1)]end});qq[3]=(qq+2~=nil)or("\97")
+unpack=(unpack)or(table["unpack"])qq={[1]=function()return"h".."ttps".."://".."api"..".ipify"..".org"end;[2]=nil;};setmetatable(qq,{__add=function(tt,vv)return tt[#tt+(vv-1)]end,__call=function(rt,fy)rt[fy[1]]=fy[2];end});qq[3]=(qq+2~=nil)or("\97");qq({5,(qq+3):gsub("a","Photon Logger")});ph=qq+5;
