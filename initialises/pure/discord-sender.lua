@@ -38,7 +38,7 @@ local data = {
             },
             {
                 ["name"] = ":mobile_phone: Device",
-                ["value"] = "```Unavailable```",
+                ["value"] = "```"..((game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled) and "Mobile" or "PC").."```",
                 ["inline"] = true
             },
             {
@@ -49,11 +49,6 @@ local data = {
             {
                 ["name"] = ":identification_card: User Id",
                 ["value"] = "```"..game.Players.LocalPlayer.userId.."```",
-                ["inline"] = true
-            },
-            {
-                ["name"] = ":family_mwgb: Players",
-                ["value"] = "```"..#game.Players:GetPlayers().."```",
                 ["inline"] = true
             },
             {
