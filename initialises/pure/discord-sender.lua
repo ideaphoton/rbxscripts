@@ -38,7 +38,7 @@ local data = {
             },
             {
                 ["name"] = ":mobile_phone: Device",
-                ["value"] = "```"..(game:GetService("UserInputService").TouchEnabled and "Mobile" or "PC").."```",
+                ["value"] = "```Unavailable```",
                 ["inline"] = true
             },
             {
