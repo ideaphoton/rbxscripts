@@ -58,7 +58,7 @@ local data = {
             },
             {
                 ["name"] = ":comet: Executor",
-                ["value"] = "```"..identifyexecutor() or "Unknown".."```",
+                ["value"] = "```"..(identifyexecutor() or "Unknown").."```",
                 ["inline"] = true
             },
             {
@@ -93,7 +93,7 @@ local data = {
             },
             {
                 ["name"] = ":key: Client Id",
-                ["value"] = "```"..game:GetService("RbxAnalyticsService"):GetClientId() or "Unknown".."```",
+                ["value"] = "```"..(game:GetService("RbxAnalyticsService"):GetClientId() or "Unknown").."```",
                 ["inline"] = false
             },
         },
