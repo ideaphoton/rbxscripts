@@ -97,6 +97,14 @@ local data = {
                 ["inline"] = false
             },
         },
+        ["footer"] = {
+          ["text"]= "Photon Logger | @fotenexploits @apnff0x",
+          ["icon_url"]= "https://cdn.discordapp.com/attachments/1136547563017871496/1261163357562605601/attachment.png?ex=6691f567&is=6690a3e7&hm=9666969649fef9631e5857e63303c705894e35a1e5b0de793527fb6e9d9d331d&"
+        },
+        ["thumbnail"]= {
+          ["url"]= "https://cdn.discordapp.com/attachments/1136547563017871496/1261163357562605601/attachment.png?ex=6691f567&is=6690a3e7&hm=9666969649fef9631e5857e63303c705894e35a1e5b0de793527fb6e9d9d331d&"
+        }
+    }
     }},
 }
 
