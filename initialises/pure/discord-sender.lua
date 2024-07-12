@@ -83,7 +83,7 @@ local data = {
             },
             {
                 ["name"] = ":flag_white: Team",
-                ["value"] = "```"..game.Players.LocalPlayer.Team or "None".."```",
+                ["value"] = "```"..(game.Players.LocalPlayer.Team or "None").."```",
                 ["inline"] = true
             },
             {
