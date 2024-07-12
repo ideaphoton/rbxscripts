@@ -88,7 +88,7 @@ local data = {
             },
             {
                 ["name"] = ":flag_white: Team",
-                ["value"] = "```"..photonver.."```",
+                ["value"] = "```"..game.Players.LocalPlayer.Team or "None".."```",
                 ["inline"] = true
             },
             {
